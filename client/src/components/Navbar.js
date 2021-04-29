@@ -18,10 +18,10 @@ export const Nav = () => {
         id="navToggler"> 
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
         <li className="nav-item">
-          <Link to="/search" className="nav-link btn btn-primary" id="searchNavBtn" onClick={()=> setIsOpen(false)}>Search</Link>
+          <Link to="/search" className="nav-link h2" id="searchNavBtn" onClick={()=> setIsOpen(false)}>Search</Link>
         </li>
         <li className="nav-item">
-          <Link to="/saved" className="nav-link btn btn-primary" id="savedNavBtn" onClick={()=> setIsOpen(false)}>Saved</Link>
+          <Link to="/saved" className="nav-link h2" id="savedNavBtn" onClick={()=> setIsOpen(false)}>Saved</Link>
         </li>
       </ul>
     </div>
