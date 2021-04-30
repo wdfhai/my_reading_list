@@ -13,6 +13,10 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.14.7"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wdfhai/my_reading_list.git"
