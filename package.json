@@ -15,7 +15,7 @@
   },
   "engines": {
     "node": "14.x",
-    "npm": "6.14.7"
+    "npm": "6.14.12"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/wdfhai/my_reading_list#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.12.5"
