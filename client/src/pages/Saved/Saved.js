@@ -5,8 +5,8 @@ import API from "../../utils/API";
 export const Saved = () => {
   const [savedBooks, setSavedBooks] = useState([])
 
-  async function getSavedBooks (){
-    await API.getBooks().then((response) => {
+  function getSavedBooks (){
+    API.getBooks().then((response) => {
       console.log(response)
       setSavedBooks(response.data)
     })

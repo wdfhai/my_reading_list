@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { SearchResults } from "../../components/SearchResults";
 import API from "../../utils/API";
-import { Input, FormBtn} from "../../components/Form"
+import { Input, FormBtn } from "../../components/Form"
 
 export const Search = () => {
   const URL = "https://www.googleapis.com/books/v1/volumes?q="
@@ -9,13 +9,6 @@ export const Search = () => {
 
   const [searchResults, setSearchResults] = useState([])
   const [formObject, setFormObject] = useState({})
-  const [saveBookInfo, setSaveBookInfo] = useState({})
-
-  useEffect (() => {
-    API.saveBook(saveBookInfo).then((response) => {
-
-    })
-  },[saveBookInfo])
 
   async function searchBooks () {
     const title = formObject["title"] || ""
@@ -50,15 +43,15 @@ export const Search = () => {
   }
 
   function handleSaveBook ({ target }){
-    console.log(target.dataset.url)
-    setSaveBookInfo({
+    API.saveBook({
       title: target.dataset.title,
       author: target.dataset.author,
       url: target.dataset.url,
       synopsis: target.dataset.synopsis,
       image: target.dataset.image,
     })
-    console.log(saveBookInfo)
+    .then(res => console.log(res.data))
+    .catch(err => console.log(err));
   }
 
   return (
