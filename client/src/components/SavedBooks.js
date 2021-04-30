@@ -13,7 +13,8 @@ export const SavedBooks = (props) => {
                 className="btn" 
                 type="button" 
                 data-id={props.id} 
-                style={{float: "right"}} 
+                style={{float: "right"}}
+                onMouseEnter={{backgroundColor: "red"}}
                 onClick={props.remove}
               >&#10060;</button>
               <h4 className="card-title">Title: {props.title}</h4>

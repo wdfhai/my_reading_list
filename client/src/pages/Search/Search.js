@@ -21,7 +21,6 @@ export const Search = () => {
     .then(res => res.json())
     .then((result) => {
       setSearchResults(result.items);
-      console.log(searchResults)
     },
     (error) => {
       console.log(error);
@@ -32,7 +31,6 @@ export const Search = () => {
   function handleInputChange({ target }) {
     const { value, name } = target;
     setFormObject({...formObject, [name]: value})
-    console.log(formObject);
   }
 
   function handleBookSearch(event) {
