@@ -5,8 +5,8 @@ import API from "../../utils/API";
 export const Saved = () => {
   const [savedBooks, setSavedBooks] = useState([])
 
-  function getSavedBooks (){
-    API.getBooks().then((response) => {
+  async function getSavedBooks (){
+    await API.getBooks().then((response) => {
       console.log(response)
       setSavedBooks(response.data)
     })
@@ -15,13 +15,13 @@ export const Saved = () => {
   function handleRemoveBook ({ target }){
     const id = target.dataset.id
     API.deleteBook(id).then((response) => {
-      console.log(response)
+      getSavedBooks()
     })
   }
 
   useEffect(() => {
     getSavedBooks()
-  },[handleRemoveBook])
+  },[])
 
   console.log(savedBooks)
 
