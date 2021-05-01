@@ -35,7 +35,7 @@ export const Saved = () => {
         <p className="lead">Looks like you have <b>{savedBooks.length}</b> books saved. You can remove the ones you want by clicking &#10060;.</p>
       </div>
       <div>
-        {savedBooks.length && savedBooks.map((book)=>(
+        {savedBooks.length > 0 && savedBooks.map((book)=>(
           <SavedBooks 
             key={book._id}
             id={book._id}
