@@ -5,7 +5,6 @@ import { Input, FormBtn } from "../../components/Form"
 
 export const Search = () => {
   const URL = "https://www.googleapis.com/books/v1/volumes?q="
-  const KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
   const [searchResults, setSearchResults] = useState([])
   const [formObject, setFormObject] = useState({})
@@ -17,7 +16,7 @@ export const Search = () => {
     const authorSearch = author.split(' ').join('+')
     const titleQuery = `+intitle:${titleSearch}` || ""
     const authorQuery = `+inauthor:${authorSearch}` || ""
-    await fetch(URL + titleSearch + titleQuery + authorQuery + "&key=" + KEY)
+    await fetch(URL + titleSearch + titleQuery + authorQuery)
     .then(res => res.json())
     .then((result) => {
       setSearchResults(result.items);
