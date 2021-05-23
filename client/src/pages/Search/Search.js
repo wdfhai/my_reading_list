@@ -36,11 +36,11 @@ export const Search = () => {
     event.preventDefault();
     const { value, name } = event.target;
     setFormObject({...formObject, [name]: value})
-    searchBooks()
+    saveComment()
   }
 
-  function handleSaveBook ({ target }){
-    API.saveBook({
+  function saveComment ({ target }){
+    API.saveComment({
       title: target.dataset.title,
       author: target.dataset.author,
       url: target.dataset.url,

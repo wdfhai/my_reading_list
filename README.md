@@ -7,7 +7,7 @@
     Find and add books to read!
     <br />
     <br />
-    <a href="https://wdfhai.github.io/my_reading_list/">View Demo</a>
+    <a href="https://wdfhai-my-reading-list.herokuapp.com/">View Demo</a>
     </p>
 </div>
 
